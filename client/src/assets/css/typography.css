@@ -1,0 +1,19 @@
+.card {
+  font-family: "Roboto", sans-serif;
+}
+.main-body {
+  font-family: "Roboto", sans-serif;
+}
+.link {
+  font-family: "Crimson Text", "Roboto", sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  text-decoration: none;
+  color: yellow;
+}
+
+.iconlink {
+  text-decoration: none;
+  color: black;
+  size: 80px;
+}
