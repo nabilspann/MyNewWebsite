@@ -4,7 +4,7 @@ import { Router } from "@reach/router";
 
 import LandingPageHeader from "./LandingPageHeader";
 // import IndexNavbar from "./IndexNavbar";
-import MainHeader from "./MainHeader";
+import MainNavbar from "./MainNavbar";
 // import { render } from "react-dom";
 import { connect } from "react-redux";
 import * as actions from "../actions";
@@ -44,8 +44,11 @@ const App = props => {
       //     </div>
       //   </BrowserRouter>
       // </div>
-      <div className="container">
-        <MainHeader />
+      <div
+        className="container"
+        style={{ paddingLeft: "0px", paddingRight: "0px" }}
+      >
+        <MainNavbar />
         <Router>
           <Main path="/" />
           <LandingPageHeader path="issuetracker" />
@@ -60,7 +63,7 @@ const App = props => {
   } else {
     return (
       <div className="container">
-        <MainHeader />
+        <MainNavbar />
         <Router>
           <Main path="/" />
           <PleaseLogin default />

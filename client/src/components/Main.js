@@ -4,6 +4,8 @@ import React from "react";
 import { Container, NavLink } from "reactstrap";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
+import mainImage from "../assets/img/main.jpg";
+
 const Main = props => {
   let pageHeader = React.createRef();
 
@@ -22,9 +24,15 @@ const Main = props => {
   });
   return (
     <>
-      <div className=" page-header clear-filter" filter-color="blue">
+      <div
+        className=" page-header clear-filter"
+        filter-color="blue"
+        // style={{ marginTop: "64px" }}
+        // className=" page-header"
+      >
         <div
           className="page-header-image"
+          // filter-color="blue"
           style={{
             backgroundImage: "url(" + require("../assets/img/main.jpg") + ")"
           }}

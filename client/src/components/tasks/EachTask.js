@@ -221,10 +221,10 @@ const EachTask = props => {
   };
 
   if (!isEditing) {
-    return <div>{renderContent()}</div>;
+    return <div className="task-layout">{renderContent()}</div>;
   } else {
     if (task.currentTask) {
-      return <div>{renderForm()}</div>;
+      return <div className="task-layout">{renderForm()}</div>;
     }
   }
 };

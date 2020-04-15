@@ -11,6 +11,7 @@ import "./assets/demo/demo.css";
 import "./assets/demo/nucleo-icons-page-styles.css";
 import "./assets/css/form.css";
 import "./assets/css/typography.css";
+import "./assets/css/layout.css";
 
 import App from "./components/App";
 import reducers from "./reducers";

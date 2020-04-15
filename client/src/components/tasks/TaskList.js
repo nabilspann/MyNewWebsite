@@ -47,6 +47,6 @@ const TaskList = props => {
     }
   };
 
-  return <div>{renderTasks()}</div>;
+  return <div className="task-layout">{renderTasks()}</div>;
 };
 export default TaskList;

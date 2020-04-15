@@ -23,7 +23,7 @@ import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
 import { Icon } from "@material-ui/core";
 
-const MainHeader = props => {
+const MainNavbar = props => {
   // const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
 
@@ -61,20 +61,14 @@ const MainHeader = props => {
         );
       default:
         return [
-          // <li key="1">{/* <Payments /> */}</li>,
-          // <li key="3" style={{ margin: "0 10px" }}>
-          //   Credits: {this.props.auth.credits}
-          // </li>,
-          // <li key="2">
           <NavLink key="1" href="/api/logout">
             Logout
           </NavLink>
-          // </li>
         ];
     }
   }
   return (
-    <>
+    <div className="navbar-layout">
       {collapseOpen ? (
         <div
           id="bodyClick"
@@ -84,7 +78,7 @@ const MainHeader = props => {
           }}
         />
       ) : null}
-      <Navbar className="bg-info" expand="lg">
+      <Navbar className="bg-info container fixed-top" expand="lg">
         <Container>
           <div className="navbar-translate">
             <NavbarBrand href="/">
@@ -127,7 +121,7 @@ const MainHeader = props => {
           </Collapse>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 };
 
@@ -135,4 +129,4 @@ function mapStateToProps({ auth }) {
   return { auth };
 }
 
-export default connect(mapStateToProps)(MainHeader);
+export default connect(mapStateToProps)(MainNavbar);
