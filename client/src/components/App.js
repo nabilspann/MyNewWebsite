@@ -28,7 +28,7 @@ const App = props => {
       document.body.classList.remove("sidebar-collapse");
     };
   }, []);
-  console.log(props.auth);
+  // console.log(props.auth);
   if (props.auth) {
     return (
       // <div className="container">
@@ -62,7 +62,10 @@ const App = props => {
     );
   } else {
     return (
-      <div className="container">
+      <div
+        className="container"
+        style={{ paddingLeft: "0px", paddingRight: "0px" }}
+      >
         <MainNavbar />
         <Router>
           <Main path="/" />
